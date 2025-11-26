@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Felipe Villacrés | Portfolio</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#home">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span>FELIPE</span>
+      </a>
+      <nav class="nav__links" aria-label="Main Navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="home" class="view hero active">
+    <div>
+      <div class="kicker">Full-Stack / Java • C • C++ • Python • JS</div>
+      <h1 class="title">Hi, I’m <span class="accent">Felipe</span> Villacrés  a developer based in Canada.</h1>
+      <div class="cta"></div>
+    </div>
+    <aside class="hero__card">
+      <h3 style="margin:0 0 10px;font-size:18px">What I Do</h3>
+      <ul class="clean" style="margin-left:18px">
+        <li>Full-stack development</li>
+        <li>Java, C, C++, Python, JavaScript</li>
+        <li>Web and desktop applications</li>
+      </ul>
+      <a class="btn btn--primary" style="margin-top:16px;display:inline-block" href="assets/docs/Resume-FelipeVillacres.pdf" target="_blank" rel="noopener">Download Resume</a>
+    </aside>
+    <div class="section-footer1">
+      <span>© <span id="y"></span> Felipe Villacrés</span>
+      <span class="muted">Built with HTML • CSS • JS</span>
+    </div>
+  </main>
+
+  <section id="about" class="view section">
+    <div class="section__inner about">
+      <div class="about__photo">
+        <img src="https://media.discordapp.net/attachments/520384014704443395/1403820028360658974/138daaee-4b1a-48d0-b50a-4100dfdc168c.jpg?ex=6898f0c8&is=68979f48&hm=935695f95cf710658d0214612f0893d539435a80e6a7743016628317228f8193&=&format=webp&width=553&height=829" alt="Felipe Villacrés" />
+      </div>
+      <div class="about__content">
+        <h2>About Me</h2>
+        <p class="muted">I’m Felipe Villacrés, a recent graduate from Seneca Polytechnic’s Computer Programming Program. I work across Java, C, C++, Python, and JavaScript, building both desktop and web applications with an emphasis on clean architecture and performance.</p>
+
+        <div class="about__actions">
+          <button class="toggle-btn" data-target="skills" aria-expanded="false">Skills</button>
+          <button class="toggle-btn" data-target="education" aria-expanded="false">Education</button>
+        </div>
+
+        <div id="skills" class="collapsible">
+          <ul class="clean">
+            <li>Java, C, C++, Python, JavaScript</li>
+            <li>HTML/CSS, React, Express, Angular, Next, Tailwind</li>
+            <li>MySQL, Oracle SQL, MongoDB, SQLite (JDBC)</li>
+            <li>Git/GitHub, Vercel, IntelliJ, VS Code</li>
+          </ul>
+        </div>
+
+        <div id="education" class="collapsible">
+          <ul class="clean">
+            <li>Computer Programming (CPP) • Toronto, Canada • Seneca Polytechnic College • 2024–2025</li>
+            <li>High School • Quito, Ecuador • ISM North • Graduated 2023</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section-footer">
+      <span>© <span id="y"></span> Felipe Villacrés</span>
+      <span class="muted">Built with HTML • CSS • JS</span>
+    </div>
+  </section>
+
+  <section id="projects" class="view section">
+    <div class="section__inner">
+      <h2>Selected Projects</h2>
+      <p class="muted" style="margin-bottom:18px">A few things I’ve built recently.</p>
+      <div class="grid">
+        <div class="card-wrap" style="display:flex;flex-direction:column;align-items:flex-start">
+          <article class="card" style="position:relative;width:100%">
+            <a class="card__overlay" href="https://assignment4-kxswib0tn-felipes-projects-552ea1d5.vercel.app/" target="_blank" rel="noopener" style="position:absolute;inset:0;z-index:1"></a>
+            <div class="thumb">
+              <img src="assets/images/climate-solutions.png" alt="" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <div class="card__body">
+              <h3>Climate Solutions</h3>
+              <div class="tech">JavaScript • Node • Express • EJS • Tailwind</div>
+              <p class="muted">Educational app on climate topics with dynamic pages and a clean UI, deployed on Vercel.</p>
+            </div>
+          </article>
+          <div class="links" style="margin-top:8px">
+            <a class="tag" href="https://github.com/felipev1005/assingment5" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+<div class="card-wrap" style="display:flex;flex-direction:column;align-items:flex-start">
+  <a href="https://github.com/felipev1005" target="_blank" rel="noopener" class="card card--clickable" style="width:100%;position:relative">
+    <div class="thumb">
+      <img src="assets/images/inventory-management-system.png" alt="" style="width:100%;height:100%;object-fit:cover">
+    </div>
+    <div class="card__body">
+      <h3>Inventory Management System (JavaFX)</h3>
+      <div class="tech">Java • JavaFX • OOP • MVC</div>
+      <p class="muted">
+        Desktop application that allows users to manage parts and products: add, modify, delete,
+        search, and persist to file/database using JavaFX table views.
+      </p>
+    </div>
+  </a>
+  <div class="links" style="margin-top:8px">
+    <a class="tag" href="https://github.com/felipev1005/inventory-management-javafx" target="_blank" rel="noopener">Repo</a>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="section-footer3">
+      <span>© <span id="y"></span> Felipe Villacrés</span>
+      <span class="muted">Built with HTML • CSS • JS</span>
+    </div>
+  </section>
+
+  <section id="contact" class="view section">
+    <div class="section__inner contact">
+      <div class="contact__box">
+        <h2>Get In Touch</h2>
+        <form onsubmit="event.preventDefault(); alert('Thanks!');">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@email.com" required />
+          </div>
+          <div class="field">
+            <label for="msg">Message</label>
+            <textarea id="msg" name="message" placeholder="Your text here"></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Send Message</button>
+        </form>
+      </div>
+      <aside class="contact__box">
+        <h2>Elsewhere</h2>
+        <div class="contact-buttons" style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn--primary" href="mailto:felipevg05@gmail.com" target="_blank" rel="noopener"><i class="fa-solid fa-envelope"></i>&nbsp;Email</a>
+          <a class="btn btn--primary" href="https://github.com/felipev1005" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>&nbsp;GitHub</a>
+          <a class="btn btn--primary" href="https://www.linkedin.com/in/felipe-villacr%C3%A9s-3b65982aa/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>&nbsp;LinkedIn</a>
+        </div>
+        <div style="margin-top:20px; text-align:center;">
+          <img src="assets/images/coding.gif" alt="Coding Animation" style="max-width:100%; border-radius:8px;">
+        </div>
+      </aside>
+    </div>
+    <div class="section-footer">
+      <span>© <span id="y"></span> Felipe Villacrés</span>
+      <span class="muted">Built with HTML • CSS • JS</span>
+    </div>
+  </section>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
