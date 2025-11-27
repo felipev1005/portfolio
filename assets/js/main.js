@@ -3,48 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const year = new Date().getFullYear();
   yearEls.forEach(el => (el.textContent = year));
 
-  document.querySelectorAll('.toggle-btn').forEach(b => {
-    b.setAttribute('aria-expanded', 'false');
-  });
-  document.querySelectorAll('.collapsible').forEach(p => p.classList.remove('open'));
+  const buttons = document.querySelectorAll('.toggle-btn');
+  const panels = document.querySelectorAll('.collapsible');
 
-  document.addEventListener('click', e => {
-    const a = e.target.closest('a[href^="#"]');
-    if (a) {
-      const id = a.getAttribute('href').slice(1);
-      const target = document.getElementById(id);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.pushState({}, '', '#' + id);
-      }
-    }
+  buttons.forEach(btn => {
+    btn.setAttribute('aria-expanded', 'false');
 
-    const btn = e.target.closest('.toggle-btn');
-    if (btn) {
+    btn.addEventListener('click', () => {
       const id = btn.dataset.target;
       const panel = document.getElementById(id);
-      if (panel) {
-        const container = btn.closest('.about__content') || document;
-        const nowOpen = !panel.classList.contains('open');
-        container
-          .querySelectorAll('.collapsible')
-          .forEach(p => p.classList.remove('open'));
-        container
-          .querySelectorAll('.toggle-btn')
-          .forEach(b => b.setAttribute('aria-expanded', 'false'));
-        if (nowOpen) {
-          panel.classList.add('open');
-          btn.setAttribute('aria-expanded', 'true');
-        }
-      }
-    }
-  });
+      if (!panel) return;
 
-  if (location.hash) {
-    const initial = document.getElementById(location.hash.slice(1));
-    if (initial) {
-      initial.scrollIntoView({ behavior: 'auto', block: 'start' });
-    }
-  }
+      const wasOpen = panel.classList.contains('open');
+
+      panels.forEach(p => p.classList.remove('open'));
+      buttons.forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+      if (!wasOpen) {
+        panel.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
 });
